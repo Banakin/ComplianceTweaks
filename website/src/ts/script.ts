@@ -44,6 +44,12 @@ window.addEventListener('DOMContentLoaded', () => {
             
     });
     
+    // Why ads popover
+    document.getElementById('whyAds').addEventListener('mouseover',  whyAdsShow);
+    document.getElementById('whyAds').addEventListener('focus',      whyAdsShow);
+    document.getElementById('whyAds').addEventListener('mouseleave', whyAdsHide);
+    document.getElementById('whyAds').addEventListener('blur',       whyAdsHide);
+
     document.querySelector('#downloadPack').addEventListener('click', downloadPack); // Download
     document.querySelectorAll('#formatGroup                >*').forEach((e: HTMLElement) => e.addEventListener('click', setFormat));                    // Format buttons
 
@@ -67,6 +73,12 @@ window.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('#panoramasModules           >*').forEach((e: HTMLElement) => e.addEventListener('click', setPano));                    // Panoramas
 });
 
+function whyAdsShow(this: HTMLElement) {
+    $(this).popover("show");
+}
+function whyAdsHide(this: HTMLElement) {
+    $(this).popover("hide");
+}
 
 // Set format to the last number of ID
 function setFormat(this: HTMLElement) {

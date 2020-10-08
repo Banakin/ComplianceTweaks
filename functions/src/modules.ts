@@ -41,7 +41,6 @@ const modulesData: Record<string, any> = {
     BetterBedrock          : require('./modules/terrain/BetterBedrock.js'),
     BrighterNether         : require('./modules/terrain/BrighterNether.js'),
     CircularSnM            : require('./modules/terrain/CircularSnM.js'),
-    ClearWater             : require('./modules/terrain/ClearWater.js'),
     PebblelessCoarseDirt   : require('./modules/terrain/PebblelessCoarseDirt.js'),
     PebblelessDirt         : require('./modules/terrain/PebblelessDirt.js'),
     SmoothOak              : require('./modules/terrain/SmoothOak.js'),
@@ -79,7 +78,6 @@ const modulesData: Record<string, any> = {
     NetherwartGrowthStage  : require('./modules/utility/NetherwartGrowthStage.js'),
     OreBorders             : require('./modules/utility/OreBorders.js'),
     RedstonePower          : require('./modules/utility/RedstonePower.js'),
-    SlicedSwords           : require('./modules/utility/SlicedSwords.js'),
     StackedItems           : require('./modules/utility/StackedItems.js'),
     StickyPistonSides      : require('./modules/utility/StickyPistonSides.js'),
     VisibleTripwires       : require('./modules/utility/VisibleTripwires.js'),
@@ -96,6 +94,7 @@ const modulesData: Record<string, any> = {
     LowShield              : require('./modules/unobtrusive/LowShield.js'),
     NoVignette             : require('./modules/unobtrusive/NoVignette.js'),
     ReducedPumpkinBlur     : require('./modules/unobtrusive/ReducedPumpkinBlur.js'),
+    SlicedSwords           : require('./modules/unobtrusive/SlicedSwords.js'),
     UnobtrusiveRain        : require('./modules/unobtrusive/UnobtrusiveRain.js'),
     UnobtrusiveScaffolding : require('./modules/unobtrusive/UnobtrusiveScaffolding.js'),
     UnobtrusiveWater       : require('./modules/unobtrusive/UnobtrusiveWater.js'),
@@ -121,27 +120,28 @@ export async function addModules(format: string, archive: Archiver, modules: str
             }
             
             // Make path to files
-            const DLPath = path.join('packfiles', directory);
+            const DLPath = path.join('images', directory);
 
             // List files
-            await bucket.getFiles({
-                autoPaginate: false,
-                directory: DLPath,
-            }).then(async (data) => {
-                // For each file
-                // tslint:disable-next-line: no-shadowed-variable
-                const promises = data[0].map(async (file) => {
-                    // Download
-                    await file.download().then((fileData) => {
-                        // Remove beginning of path from file name
-                        const fileName = file.name.replace(DLPath, '');
-                        // Add file to zip
-                        return archive.append(fileData[0], {name: fileName});
-                    });
-                });
-                await Promise.all(promises);
-                return;
-            });
+            archive.directory(DLPath, false);
+            // await bucket.getFiles({
+            //     autoPaginate: false,
+            //     directory: DLPath,
+            // }).then(async (data) => {
+            //     // For each file
+            //     // tslint:disable-next-line: no-shadowed-variable
+            //     const promises = data[0].map(async (file) => {
+            //         // Download
+            //         await file.download().then((fileData) => {
+            //             // Remove beginning of path from file name
+            //             const fileName = file.name.replace(DLPath, '');
+            //             // Add file to zip
+            //             return archive.append(fileData[0], {name: fileName});
+            //         });
+            //     });
+            //     await Promise.all(promises);
+            //     return;
+            // });
         }
     });
     return Promise.all(promises);

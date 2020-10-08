@@ -7,6 +7,9 @@ modules:
     image: "/images/modules/utility/OreBorders.png"
     description: "Places a border around ores for easier visibility."
     origin: "vanillatweaks"
+    conflicting:
+      - UniformOres
+      - BrighterNether
   
   - id: "StickyPistonSides"
     name: "Sticky Piston Sides"
@@ -35,12 +38,16 @@ modules:
     image: "/images/modules/utility/ColoredBows.png"
     description: "Colors the bow handle to show how far back you've pulled." 
     origin: "faithfultweaks"
+    conflicting:
+      - FlintArrow
 
   - id: "NetherwartGrowthStage"
     name: "Netherwart Growth Stages"
     image: "/images/modules/utility/NetherwartGrowthStage.png"
     description: "Improves netherwart growth stage visibility." 
     origin: "faithfultweaks"
+    conflicting:
+      - BrighterNether
   
   - id: "StackedItems"
     name: "Stacked Items"
@@ -113,7 +120,7 @@ modules:
       - 1-10
       - 1-11
       - 1-12
-      
+
   - id: "VisibleTripwires"
     name: "Visible Tripwires"
     image: "/images/modules/utility/VisibleTripwires.png"
@@ -152,20 +159,48 @@ modules:
       - 1-13
       - 1-14
 
+  - id: "BrokenItems"
+    name: "Broken Items"
+    image: "/images/modules/utility/BrokenItems.png"
+    description: "Items get more and more broken as they get lower in durability."
+    origin: "vanillatweaks"
+    conflicting:
+      - SlicedSwords
 
-# Lists of modules that conflict
-conflictingModules:
-  # Swords
-  - sortingName: "swords"
-    modules:
-    - id: "SlicedSwords"
-      name: "Sliced Swords"
-      image: "/images/modules/utility/SlicedSwords.png"
-      description: "Changes the sword texture to be shorter for more visibility."
-      origin: "faithfultweaks"
+  - id: "VisualHoney"
+    name: "Visual Honey Stages"
+    image: "/images/modules/utility/VisualHoney.png"
+    description: "Visualizes the honey stages in Bee Nests and Bee Hives."
+    origin: "vanillatweaks"
+    notcompatible:
+      - 1-8
+      - 1-9
+      - 1-10
+      - 1-11
+      - 1-12
+      - 1-13
+      - 1-14
 
-    - id: "BrokenItems"
-      name: "Broken Items"
-      image: "/images/modules/utility/BrokenItems.png"
-      description: "Items get more and more broken as they get lower in durability."
-      origin: "vanillatweaks"
+  - id: "BrewingGuide"
+    name: "Brewing Guide"
+    image: "/images/modules/utility/BrewingGuide.png"
+    description: "Adds a cheat sheet to the Brewing Stand interface."
+    origin: "vanillatweaks"
+    notcompatible:
+      - 1-8
+      - 1-9
+      - 1-10
+      - 1-11
+      - 1-12
+
+  - id: "VisibleTripwires"
+    name: "Visible Tripwires"
+    image: "/images/modules/utility/VisibleTripwires.png"
+    description: "Makes tripwire a bright blue so you can easily see them."
+    origin: "vanillatweaks"
+    notcompatible:
+      - 1-8
+      - 1-9
+      - 1-10
+      - 1-11
+      - 1-12

@@ -120,7 +120,45 @@ modules:
       - 1-10
       - 1-11
       - 1-12
-  
+
+  - id: "VisibleTripwires"
+    name: "Visible Tripwires"
+    image: "/images/modules/utility/VisibleTripwires.png"
+    description: "Makes tripwire a bright blue so you can easily see them."
+    origin: "vanillatweaks"
+    notcompatible:
+      - 1-8
+      - 1-9
+      - 1-10
+      - 1-11
+      - 1-12
+
+  - id: "BrewingGuide"
+    name: "Brewing Guide"
+    image: "/images/modules/utility/BrewingGuide.png"
+    description: "Adds a cheat sheet to the Brewing Stand interface."
+    origin: "vanillatweaks"
+    notcompatible:
+      - 1-8
+      - 1-9
+      - 1-10
+      - 1-11
+      - 1-12
+      
+  - id: "VisualHoney"
+    name: "Visual Honey Stages"
+    image: "/images/modules/utility/VisualHoney.png"
+    description: "Visualizes the honey stages in Bee Nests and Bee Hives."
+    origin: "vanillatweaks"
+    notcompatible:
+      - 1-8
+      - 1-9
+      - 1-10
+      - 1-11
+      - 1-12
+      - 1-13
+      - 1-14
+
   - id: "BrokenItems"
     name: "Broken Items"
     image: "/images/modules/utility/BrokenItems.png"

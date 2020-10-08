@@ -68,6 +68,7 @@ const modulesData: Record<string, any> = {
     // Utility
     AgedKelp               : require('./modules/utility/AgedKelp.js'),
     BetterObservers        : require('./modules/utility/BetterObservers.js'),
+    BrewingGuide           : require('./modules/utility/BrewingGuide.js'),
     BrokenItems            : require('./modules/utility/BrokenItems.js'),
     CleanRedstone          : require('./modules/utility/CleanRedstone.js'),
     ClearPatterns          : require('./modules/utility/ClearPatterns.js'),
@@ -79,6 +80,8 @@ const modulesData: Record<string, any> = {
     RedstonePower          : require('./modules/utility/RedstonePower.js'),
     StackedItems           : require('./modules/utility/StackedItems.js'),
     StickyPistonSides      : require('./modules/utility/StickyPistonSides.js'),
+    VisibleTripwires       : require('./modules/utility/VisibleTripwires.js'),
+    VisualHoney            : require('./modules/utility/VisualHoney.js'),
 
     // Unobtrusive
     AlternateEnchantGlint  : require('./modules/unobtrusive/AlternateEnchantGlint.js'),

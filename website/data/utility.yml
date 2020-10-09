@@ -165,4 +165,3 @@ modules:
     description: "Items get more and more broken as they get lower in durability."
     origin: "vanillatweaks"
     conflicting:
-      - SlicedSwords

@@ -45,12 +45,20 @@ modules:
     image: "/images/modules/aesthetic/BlackNetherBricks.png"
     description: "Changes the texture of Nether Bricks to make them black."
     origin: "vanillatweaks"
+    conflicting:
+      - BrighterNether
   
   - id: "AlternateEntities"
     name: "Alternate Entities"
     image: "/images/modules/aesthetic/AlternateEntities.png"
     description: "Adds variants to a lot of entities."
     origin: "faithfultweaks"
+    notcompatible:
+      - 1-8
+      - 1-9
+      - 1-10
+      - 1-11
+      - 1-12
     
   - id: "RedGolemFlowers"
     name: "Red Iron Golem Flowers"
@@ -91,6 +99,9 @@ modules:
     image: "/images/modules/aesthetic/RedCrimson.png"
     description: "Recolors all Crimson Wood related blocks and items to be redder, matching the shades of Crimson Nylium and Wart blocks closer."
     origin: "vanillatweaks"
+    conflicting:
+      - BrighterNether
+      - GlassDoors
     notcompatible:
       - 1-8
       - 1-9
@@ -148,6 +159,8 @@ modules:
     image: "/images/modules/aesthetic/FlintArrow.png"
     description: "Changes arrow sprites and entities to have Flint colored tips."
     origin: "vanillatweaks"
+    conflicting:
+      - ColoredBows
     notcompatible:
       - 1-8
       - 1-9
@@ -248,6 +261,9 @@ modules:
     image: "/images/modules/aesthetic/SmoothWarped.png"
     description: "Removes the harsh contrast from Warped Planks."
     origin: "vanillatweaks"
+    conflicting:
+      - BrighterNether
+      - GlassDoors
     notcompatible:
       - 1-8
       - 1-9
@@ -263,6 +279,54 @@ modules:
     image: "/images/modules/aesthetic/GreenJungle.png"
     description: "Recolors all Jungle Wood related blocks and items to a nicely jungly shade of green."
     origin: "vanillatweaks"
+    conflicting:
+      - GlassDoors
+    notcompatible:
+      - 1-8
+      - 1-9
+      - 1-10
+      - 1-11
+      - 1-12
+  
+  - id: "EndlessRod"
+    name: "Endless End Rods"
+    image: "/images/modules/aesthetic/EndlessRod.png"
+    description: "Removes the purple nub from the End Rod altogether."
+    origin: "vanillatweaks"
+    conflicting:
+      - PinkRod
+    notcompatible:
+      - 1-8
+      - 1-9
+      - 1-10
+      - 1-11
+      - 1-12
+      - 1-13
+      - 1-14
+
+  - id: "PinkRod"
+    name: "Pink End Rods"
+    image: "/images/modules/aesthetic/PinkRod.png"
+    description: "Changes the grey base of the End Rods to pink."
+    origin: "vanillatweaks"
+    conflicting:
+      - EndlessRod
+    notcompatible:
+      - 1-8
+      - 1-9
+      - 1-10
+      - 1-11
+      - 1-12
+      - 1-13
+      - 1-14
+
+  - id: "CodeCraftedWool"
+    name: "CodeCrafted's Wool"
+    image: "/images/modules/aesthetic/CodeCraftedWool.png"
+    description: "Makes wool the same style as CodeCrafted's but with 1 pixel edges."
+    origin: "faithfultweaks"
+    conflicting:
+      - SofterWool
     notcompatible:
       - 1-8
       - 1-9
@@ -270,76 +334,37 @@ modules:
       - 1-11
       - 1-12
 
-# Lists of modules that conflict
-conflictingModules:
-  # Wool
-  - sortingName: "wool"
-    modules:
-    - id: "CodeCraftedWool"
-      name: "CodeCrafted's Wool"
-      image: "/images/modules/aesthetic/CodeCraftedWool.png"
-      description: "Makes wool the same style as CodeCrafted's but with 1 pixel edges."
-      origin: "faithfultweaks"
-      notcompatible:
-        - 1-8
-        - 1-9
-        - 1-10
-        - 1-11
-        - 1-12
-    - id: "SofterWool"
-      name: "Softer Wool"
-      image: "/images/modules/aesthetic/SofterWool.png"
-      description: "Lowers the contrast and smoothens all wool blocks."
-      origin: "vanillatweaks"
-      notcompatible:
-        - 1-8
-        - 1-9
-        - 1-10
-        - 1-11
-        - 1-12
-        
-  - sortingName: "wood"
-    modules:
-    - id: "GlassDoors"
-      name: "Glass Doors"
-      image: "/images/modules/aesthetic/GlassDoors.png"
-      description: "Adds uniquely shaped glass windows into every door type."
-      origin: "vanillatweaks"
-      notcompatible:
-        - 1-8
-        - 1-9
-        - 1-10
-        - 1-11
-        - 1-12
-        - 1-13
-        - 1-14
-        - 1-15
-        
-  - sortingName: "EndRod"
-    modules:
-    - id: "EndlessRod"
-      name: "Endless End Rods"
-      image: "/images/modules/aesthetic/EndlessRod.png"
-      description: "Removes the purple nub from the End Rod altogether."
-      origin: "vanillatweaks"
-      notcompatible:
-        - 1-8
-        - 1-9
-        - 1-10
-        - 1-11
-        - 1-12
-        - 1-13
-        - 1-14
-    - id: "PinkRod"
-      name: "Pink End Rods"
-      image: "/images/modules/aesthetic/PinkRod.png"
-      description: "Changes the grey base of the End Rods to pink."
-      origin: "vanillatweaks"
-      notcompatible:
-        - 1-8
-        - 1-9
-        - 1-10
-        - 1-11
-        - 1-12
-        - 1-13
-        - 1-14
+  - id: "SofterWool"
+    name: "Softer Wool"
+    image: "/images/modules/aesthetic/SofterWool.png"
+    description: "Lowers the contrast and smoothens all wool blocks."
+    origin: "vanillatweaks"
+    conflicting:
+      - CodeCraftedWool
+    notcompatible:
+      - 1-8
+      - 1-9
+      - 1-10
+      - 1-11
+      - 1-12
+      
+  - id: "GlassDoors"
+    name: "Glass Doors"
+    image: "/images/modules/aesthetic/GlassDoors.png"
+    description: "Adds uniquely shaped glass windows into every door type."
+    origin: "vanillatweaks"
+    conflicting:
+      - BrighterNether
+      - RedCrimson
+      - GreenJungle
+      - SmoothWarped
+    notcompatible:
+      - 1-8
+      - 1-9
+      - 1-10
+      - 1-11
+      - 1-12
+      - 1-13
+      - 1-14
+      - 1-15
+    

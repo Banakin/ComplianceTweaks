@@ -69,84 +69,40 @@ export async function addIconModules(modules: string[], archive: Archiver){
 
         // Get defualt icons.png
         defaultIcons.src = path.join("images", "modules/hud", "default.png");
-        // await bucket.file(path.join("packfiles/modules/hud", "default.png")).download().then((data) => {
-        //     defaultIcons.src = data[0];
-        //     return;
-        // });
 
         // Get crosshair icons
         if (crosshairMode === 0) {
             crosshairIcons.src = path.join("images", "modules/hud", "crosshair", "default.png");
-            // await bucket.file(path.join("packfiles/modules/hud", "crosshair", "default.png")).download().then((data) => {
-            //     crosshairIcons.src = data[0];
-            //     return;
-            // });
         }
 
         // Get hunger icons
         if (hungerMode === 0) {
             hungerIcons.src = path.join("images", "modules/hud", "hunger", "default.png");
-            // await bucket.file(path.join("packfiles/modules/hud", "hunger", "default.png")).download().then((data) => {
-            //     hungerIcons.src = data[0];
-            //     return;
-            // });
         } else if (hungerMode === 1) {
             hungerIcons.src = path.join("images", "modules/hud", "hunger", "melons.png");
-            // await bucket.file(path.join("packfiles/modules/hud", "hunger", "melons.png")).download().then((data) => {
-            //     hungerIcons.src = data[0];
-            //     return;
-            // });
         } else if (hungerMode === 2) {
             hungerIcons.src = path.join("images", "modules/hud", "hunger", "bread.png");
-            // await bucket.file(path.join("packfiles/modules/hud", "hunger", "bread.png")).download().then((data) => {
-            //     hungerIcons.src = data[0];
-            //     return;
-            // });
         }
 
         // Get ping icons
         if (pingMode === 0) {
             pingIcons.src = path.join("images", "modules/hud", "ping", "default.png");
-            // await bucket.file(path.join("packfiles/modules/hud", "ping", "default.png")).download().then((data) => {
-            //     pingIcons.src = data[0];
-            //     return;
-            // });
         } else if (pingMode === 1) {
             pingIcons.src = path.join("images", "modules/hud", "ping", "colored.png");
-            // await bucket.file(path.join("packfiles/modules/hud", "ping", "colored.png")).download().then((data) => {
-            //     pingIcons.src = data[0];
-            //     return;
-            // });
         }
 
         // Get wither icons
         if (witherHeartsMode === 0) {
             witherIcons.src = path.join("images", "modules/hud", "witherhearts", "default.png");
-            // await bucket.file(path.join("packfiles/modules/hud", "witherhearts", "default.png")).download().then((data) => {
-            //     witherIcons.src = data[0];
-            //     return;
-            // });
         } else if (witherHeartsMode === 1) {
             witherIcons.src = path.join("images", "modules/hud", "witherhearts", "blue.png");
-            // await bucket.file(path.join("packfiles/modules/hud", "witherhearts", "blue.png")).download().then((data) => {
-            //     witherIcons.src = data[0];
-            //     return;
-            // });
         }
 
         // Get XP icons
         if (xpMode === 0) {
             xpIcons.src = path.join("images", "modules/hud", "xp", "default.png");
-            // await bucket.file(path.join("packfiles/modules/hud", "xp", "default.png")).download().then((data) => {
-            //     xpIcons.src = data[0];
-            //     return;
-            // });
         } else if (xpMode === 1) {
             xpIcons.src = path.join("images", "modules/hud", "xp", "rainbow.png");
-            // await bucket.file(path.join("packfiles/modules/hud", "xp", "rainbow.png")).download().then((data) => {
-            //     xpIcons.src = data[0];
-            //     return;
-            // });
         }
 
         // Mix the images together

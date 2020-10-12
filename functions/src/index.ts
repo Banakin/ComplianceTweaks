@@ -13,13 +13,6 @@ import * as path from 'path';
 // Usefull tools
 import { v4 as uuidv4 } from 'uuid';
 
-// Express
-// import * as express from "express";
-// const app = express();
-// const port: number = 3000;
-// app.use(express.json()) // for parsing application/json
-// app.use(express.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
-
 // Firebase
 import * as functions from 'firebase-functions';
 import { Bucket } from "@google-cloud/storage";
@@ -46,7 +39,6 @@ exports.deletePacks = functions.pubsub.schedule('0 4 * * *').onRun(async (cxt) =
 
 });
 
-// app.post('/', ----- EXPRESS STUFF
 // Create a zip file from file in storage ----- CLOUD FUNCTION -----
 exports.makePack = functions.https.onRequest(async (req, res) => {
     res.set('Access-Control-Allow-Origin', process.env.NODE_ENV !== 'production' ? '*' : 'https://faithfultweaks.com');
@@ -91,9 +83,6 @@ exports.makePack = functions.https.onRequest(async (req, res) => {
     archive.append(creditsTxt, {name: 'credits.txt'}); // add credits.txt file
     
     // Add pack icon
-    // await bucket.file('packfiles/pack.png').download().then((data) => {
-    //     return archive.append(data[0], {name: 'pack.png'});
-    // });
     archive.file(path.join('images', 'pack.png'), {name: 'pack.png'});
     
     if (modules !== undefined && modules !== null) {
@@ -228,8 +217,3 @@ Faithful Textures by xMrVizzy: https://faithful.team
 
 This pack is a modification of The Faithful 32x pack. 
 Modifications are based off of/inspired by the packs by Vanilla tweaks.`
-
-// Have express app listen on the set port
-// app.listen(port, () => {
-//     console.log(`Example app listening at http://localhost:${port}`);
-// });

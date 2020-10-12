@@ -97,19 +97,19 @@ exports.makePack = functions.https.onRequest(async (req, res) => {
     archive.file(path.join('images', 'pack.png'), {name: 'pack.png'});
     
     if (modules !== undefined && modules !== null) {
-        await addModules(format, archive, modules, bucket); // Add modules to the pack
+        await addModules(format, archive, modules); // Add modules to the pack
     }
 
     if (iconModules !== undefined && iconModules !== null) {
-        await addIconModules(iconModules, archive, bucket); // Add icon modules to icons.png
+        await addIconModules(iconModules, archive); // Add icon modules to icons.png
     }
 
     if (optionsBackground !== undefined && optionsBackground !== null) {
-        await addOptionsBG(optionsBackground, archive, bucket); // Add options background
+        await addOptionsBG(optionsBackground, archive); // Add options background
     }
     
     if (panoOption !== undefined && panoOption !== null) {
-        await addMenuPanorama(panoOption, archive, bucket); // Add menu panorama
+        await addMenuPanorama(panoOption, archive); // Add menu panorama
     }
 
     await archive.finalize(); // finalize the archive

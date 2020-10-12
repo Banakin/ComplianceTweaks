@@ -1,7 +1,7 @@
 [discord]:https://discord.gg/kBMEmDD
 [twitter]:https://twitter.com/faithfultweaks
 [reddit]:https://www.reddit.com/r/FaithfulTweaks/
-[wiki]:https://github.com/FaithfulTweaks/FaithfulTweaks/
+[wiki]:https://github.com/FaithfulTweaks/FaithfulTweaks/wiki
 
 <h1 align="center">
     <br>

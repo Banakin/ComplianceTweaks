@@ -26,8 +26,8 @@
 - 🦜 Check us out on [Twitter](https://twitter.com/faithfultweaks)
 - 🔈 Join us on [Reddit](https://www.reddit.com/r/FaithfulTweaks/)
 
-## Creating Modules
-If you're interested in creating a module, please look at **[the wiki](https://github.com/FaithfulTweaks/FaithfulTweaks/wiki)**.
+## Contributing
+There are two different categories for contributions. To contribute please read [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Making requests to the Cloud Function
 Example body of POST request:

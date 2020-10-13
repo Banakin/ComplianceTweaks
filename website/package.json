@@ -3,7 +3,7 @@
     "description": "Hugo Website",
     "scripts": {
         "clear:webpack": "rm -rf static/packaged",
-        "clear:hugo": "rm -rf ../public",
+        "clear:hugo": "rm -rf ./public",
         "clear:nodejs": "rm -rf node_modules",
         "clear": "npm run clear:webpack && npm run clear:hugo",
         "dev:webpack": "webpack --mode=development --watch",

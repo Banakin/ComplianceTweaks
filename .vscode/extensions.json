@@ -1,6 +1,7 @@
 {
-	"recommendations": [
+    "recommendations": [
         "dbaeumer.vscode-eslint",
-        "redhat.vscode-yaml"
-	]
+        "redhat.vscode-yaml",
+        "bungcip.better-toml"
+    ]
 }

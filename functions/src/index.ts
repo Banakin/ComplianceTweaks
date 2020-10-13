@@ -11,7 +11,7 @@ import * as os from 'os';
 import * as path from 'path';
 
 // Usefull tools
-import { v4 as uuidv4 } from 'uuid';
+import { nanoid } from 'nanoid';
 
 // Firebase
 import * as functions from 'firebase-functions';
@@ -104,16 +104,16 @@ exports.makePack = functions.https.onRequest(async (req, res) => {
     await archive.finalize(); // finalize the archive
 
     // ----- UPLOAD THE ARCHIVE -----
-    const fileUUID = uuidv4();
-    const tokenUUID = uuidv4();
+    const fileID = nanoid(10);
+    const downloadToken = nanoid(10);
 
-    const newPackPath = path.join('FaithfulTweaks', fileUUID + '.zip'); // New file upload path
+    const newPackPath = path.join('FaithfulTweaks', fileID + '.zip'); // New file upload path
 
     // Metadata
     const metadata = {
         contentType: 'application/zip',
         metadata: {
-            firebaseStorageDownloadTokens: tokenUUID,
+            firebaseStorageDownloadTokens: downloadToken,
         }
     };
     
@@ -128,7 +128,7 @@ exports.makePack = functions.https.onRequest(async (req, res) => {
         }).then((data) => {
             const file = data[0];
             // Respond with URL
-            res.status(200).send({ "url": "https://firebasestorage.googleapis.com/v0/b/" + bucket.name + "/o/" + encodeURIComponent(file.name) + "?alt=media&token=" + tokenUUID });
+            res.status(200).send({ "url": "https://firebasestorage.googleapis.com/v0/b/" + bucket.name + "/o/" + encodeURIComponent(file.name) + "?alt=media&token=" + downloadToken });
             fs.unlinkSync(tempFilePath); // Unlink file
             return;
         });

@@ -9,7 +9,7 @@
 This folder is the home of the website. The website is built with [HUGO][hugo]. If you have any issues, please check out HUGO's documentation first.
 
 ## Testing and Building
-[HUGO][hugo] and [NodeJS][node] are required to run the website. 
+[HUGO][hugo] and [NodeJS][node] are required to run the website. Please first run `npm install` to install the required NodeJS packages.
 
 - `npm run build` - This command will build the website and place the output in /public/
 - `npm run dev` - This command will build the website and serve a live development version that you can open in the browser.

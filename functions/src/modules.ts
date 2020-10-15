@@ -109,7 +109,7 @@ export async function addModules(format: string, archive: Archiver, modules: str
     const promises = modules.map(async (modName) => {
         // If the module exists
         if (modulesData[modName] !== undefined && modulesData[modName] !== null) {
-            var obj = JSON.parse(fs.readFileSync(path.join('./src/modules/', modulesData[modName]), 'utf8'));
+            let obj = JSON.parse(fs.readFileSync(path.join('./src/modules/', modulesData[modName]), 'utf8'));
 
             // Try to get module path
             let directory;

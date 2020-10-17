@@ -2,6 +2,7 @@
     "recommendations": [
         "dbaeumer.vscode-eslint",
         "redhat.vscode-yaml",
-        "bungcip.better-toml"
+        "bungcip.better-toml",
+        "eg2.vscode-npm-script"
     ]
 }

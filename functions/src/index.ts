@@ -11,7 +11,8 @@ import * as os from 'os';
 import * as path from 'path';
 
 // Usefull tools
-import { nanoid } from 'nanoid';
+import { customAlphabet } from 'nanoid'
+const nanoid = customAlphabet('1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ', 10)
 
 // Firebase
 import * as functions from 'firebase-functions';
@@ -104,8 +105,8 @@ exports.makePack = functions.https.onRequest(async (req, res) => {
     await archive.finalize(); // finalize the archive
 
     // ----- UPLOAD THE ARCHIVE -----
-    const fileID = nanoid(10);
-    const downloadToken = nanoid(10);
+    const fileID = nanoid();
+    const downloadToken = nanoid();
 
     const newPackPath = path.join('FaithfulTweaks', fileID + '.zip'); // New file upload path
 

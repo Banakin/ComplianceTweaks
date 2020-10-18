@@ -300,7 +300,7 @@ function downloadPack() {
         "panoOption": panoOption,
     };
     
-    request.open('POST', url, true);
+    request.open(process.env["NODE_ENV"] !== 'production' ? 'GET' : 'POST', url, true); // GET local and POST in production?!?!?!?!?!?!?!?
     request.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
     request.onreadystatechange = function() {
         if (this.readyState === 4 && this.status == 200) {

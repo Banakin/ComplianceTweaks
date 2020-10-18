@@ -157,6 +157,7 @@ function mcMeta(format: string) {
         packFormat = 5;
     } else if (format === "1.16.2") {
         packFormat = 6;
+        formatStr = "1.16.2 - Latest";
     } else {
         packFormat = 1
         formatStr = "Error making pack";

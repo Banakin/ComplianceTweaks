@@ -165,6 +165,20 @@ modules:
       - 1-13
       - 1-14
 
+  - id: "VisualSaplings"
+    name: "Visual Sapling Growth"
+    image: "/images/modules/utility/VisualSaplings.png"
+    description: "Visualizes the Sapling growth stages by making them taller on their second stage."
+    origin: "vanillatweaks"
+    notcompatible:
+      - 1-8
+      - 1-9
+      - 1-10
+      - 1-11
+      - 1-12
+      - 1-13
+      - 1-14
+
   - id: "BrokenItems"
     name: "Broken Items"
     image: "/images/modules/utility/BrokenItems.png"

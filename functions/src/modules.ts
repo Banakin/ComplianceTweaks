@@ -80,8 +80,9 @@ const modulesData: Record<string, any> = {
     RedstonePower          : '/utility/RedstonePower.json',
     StackedItems           : '/utility/StackedItems.json',
     StickyPistonSides      : '/utility/StickyPistonSides.json',
-    VisibleTripwires       : '/utility/VisibleTripwires.json',
     VisualHoney            : '/utility/VisualHoney.json',
+    VisibleTripwires       : '/utility/VisibleTripwires.json',
+    VisualSaplings         : '/utility/VisibleSaplings.json',
 
     // Unobtrusive
     AlternateEnchantGlint  : '/unobtrusive/AlternateEnchantGlint.json',

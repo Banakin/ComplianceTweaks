@@ -82,7 +82,7 @@ const modulesData: Record<string, any> = {
     StickyPistonSides      : '/utility/StickyPistonSides.json',
     VisualHoney            : '/utility/VisualHoney.json',
     VisibleTripwires       : '/utility/VisibleTripwires.json',
-    VisualSaplings         : '/utility/VisibleSaplings.json',
+    VisualSaplings         : '/utility/VisualSaplings.json',
 
     // Unobtrusive
     AlternateEnchantGlint  : '/unobtrusive/AlternateEnchantGlint.json',

@@ -1,3 +1,8 @@
+[discord]:https://discord.gg/kBMEmDD
+[twitter]:https://twitter.com/faithfultweaks
+[reddit]:https://www.reddit.com/r/FaithfulTweaks/
+[wiki]:https://github.com/FaithfulTweaks/FaithfulTweaks/wiki
+
 <h1 align="center">
     <br>
     <a href="https://faithfultweaks.com/"><img src="https://raw.githubusercontent.com/FaithfulTweaks/FaithfulTweaks/master/website/static/images/logo.png" alt="Faithful Tweaks" width="150"></a>
@@ -21,32 +26,16 @@
 <p align="center"><img src="https://raw.githubusercontent.com/FaithfulTweaks/FaithfulTweaks/master/screenshot.png"></img></p>
 
 ## Get Tn Touch
-- 💬 Come visit us on [Discord](https://discord.gg/kBMEmDD)
+- 💬 Come visit us on [Discord][discord]
 - ❗️ Create [an issue](https://github.com/FaithfulTweaks/FaithfulTweaks/issues/new)
-- 🦜 Check us out on [Twitter](https://twitter.com/faithfultweaks)
-- 🔈 Join us on [Reddit](https://www.reddit.com/r/FaithfulTweaks/)
+- 🦜 Check us out on [Twitter][twitter]
+- 🔈 Join us on [Reddit][reddit]
 
-## Creating Modules
-If you're interested in creating a module, please look at **[the wiki](https://github.com/FaithfulTweaks/FaithfulTweaks/wiki)**.
+## Contributing
+There are two different categories for contributions. To contribute please read [CONTRIBUTING.md](CONTRIBUTING.md).
 
-## Making requests to the Cloud Function
-Example body of POST request:
-```json
-{
-    "format":  "1.16.2",
-    "modules":  ["SlicedSwords", "ReducedPumpkinBlur", "ColoredBows", "OreBorders", "StickyPistonSides"],
-    "iconModules": ["MelonHunger", "ColoredPing", "BlueWitherHearts", "RainbowXP"],
-    "optionsBackground": "AcaciaPlanksBG",
-    "panoOption": "ClassicPano"
-}
-```
-
-Example response from POST request:
-```json
-{
-    "url": "https://firebasestorage.googleapis.com/v0/b/faithfultweaks-app.appspot.com/o/FaithfulTweaks%2F900000000-0000-0000-0000-000000000000.zip?alt=media&token=00000000-0000-0000-0000-000000000000"
-}
-```
+## Documentation
+For doumention on the project, please check out [the wiki][wiki].
 
 ## Credits
 ⚠ **NOTE** We try to give credit to those that created the textures but we're not great at keeping track. If you believe some textures are yours please contact us and we'll add you to this list (or take your textures down upon request).

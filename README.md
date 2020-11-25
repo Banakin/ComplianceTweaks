@@ -5,7 +5,7 @@
 
 <h1 align="center">
     <br>
-    <a href="https://faithfultweaks.com/"><img src="https://raw.githubusercontent.com/ComplianceTweaks/ComplianceTweaks/compliance/website/static/images/logo.png" alt="Compliance Tweaks" width="150"></a>
+    <a href="https://faithfultweaks.com/"><img src="https://raw.githubusercontent.com/ComplianceTweaks/ComplianceTweaks/compliance/website/static/images/logo.png" alt="Compliance Tweaks" width="200"></a>
     <br>
     Compliance Tweaks
     <br>

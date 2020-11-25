@@ -37,7 +37,7 @@ modules:
     name: "Colored Bow Stages"
     image: "/images/modules/utility/ColoredBows.png"
     description: "Colors the bow handle to show how far back you've pulled." 
-    origin: "faithfultweaks"
+    origin: "compliancetweaks"
     conflicting:
       - FlintArrow
 
@@ -45,7 +45,7 @@ modules:
     name: "Netherwart Growth Stages"
     image: "/images/modules/utility/NetherwartGrowthStage.png"
     description: "Improves netherwart growth stage visibility." 
-    origin: "faithfultweaks"
+    origin: "compliancetweaks"
     conflicting:
       - BrighterNether
   
@@ -53,7 +53,7 @@ modules:
     name: "Stacked Items"
     image: "/images/modules/utility/StackedItems.png"
     description: "Adds new textures to your items when you stack them." 
-    origin: "faithfultweaks"
+    origin: "compliancetweaks"
     notcompatible:
       - 1-8
       - 1-9

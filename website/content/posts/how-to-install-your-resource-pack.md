@@ -6,7 +6,7 @@ draft: false
 A guide on installing your custom resource pack.
 
 ### Step 1:
-Install Faithful x32 (this step is not required but strongly recommended).
+Install Compliance x32 (this step is not required but strongly recommended).
 Check out [this guide](/posts/how-to-install-faithful-x32) on installing Faithful x32.
 
 

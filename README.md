@@ -1,33 +1,33 @@
 [discord]:https://discord.gg/kBMEmDD
 [twitter]:https://twitter.com/faithfultweaks
 [reddit]:https://www.reddit.com/r/FaithfulTweaks/
-[wiki]:https://github.com/FaithfulTweaks/FaithfulTweaks/wiki
+[wiki]:https://github.com/ComplianceTweaks/ComplianceTweaks/wiki
 
 <h1 align="center">
     <br>
-    <a href="https://faithfultweaks.com/"><img src="https://raw.githubusercontent.com/FaithfulTweaks/FaithfulTweaks/master/website/static/images/logo.png" alt="Faithful Tweaks" width="150"></a>
+    <a href="https://faithfultweaks.com/"><img src="https://raw.githubusercontent.com/ComplianceTweaks/ComplianceTweaks/master/website/static/images/logo.png" alt="Compliance Tweaks" width="150"></a>
     <br>
-    Faithful Tweaks
+    Compliance Tweaks
     <br>
 </h1>
 
-<p align="center">An open source recreation of <a href="https://vanillatweaks.net/picker/resource-packs/">Vanilla Tweaks</a> for the Faithful x32 Texturepack by <a href="https://faithful.team/">The Faithful Team</a>.</p>
+<p align="center">An open source recreation of <a href="https://vanillatweaks.net/picker/resource-packs/">Vanilla Tweaks</a> for the Compliance x32 Texturepack by <a href="https://compliancepack.net/">The Compliance Team</a>.</p>
 
 <p align="center">
-    <a href="https://github.com/FaithfulTweaks/FaithfulTweaks/actions"><img alt="Website Deploy" src="https://github.com/FaithfulTweaks/FaithfulTweaks/workflows/Website%20Deploy/badge.svg"></a>
-    <a href="https://github.com/FaithfulTweaks/FaithfulTweaks/actions"><img alt="Functions Deploy" src="https://github.com/FaithfulTweaks/FaithfulTweaks/workflows/Functions%20Deploy/badge.svg"></a>
-    <a href="https://github.com/FaithfulTweaks/FaithfulTweaks/actions"><img alt="Images Deploy" src="https://github.com/FaithfulTweaks/FaithfulTweaks/workflows/Images%20Deploy/badge.svg"></a>
-    <a href="https://github.com/FaithfulTweaks/FaithfulTweaks/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/FaithfulTweaks/FaithfulTweaks"></a>
-    <a href="https://github.com/FaithfulTweaks/FaithfulTweaks/network"><img alt="GitHub forks" src="https://img.shields.io/github/forks/FaithfulTweaks/FaithfulTweaks"></a>
-    <a href="https://github.com/FaithfulTweaks/FaithfulTweaks/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/FaithfulTweaks/FaithfulTweaks"></a>
-    <a href="https://github.com/FaithfulTweaks/FaithfulTweaks/blob/master/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/FaithfulTweaks/FaithfulTweaks"></a>
+    <a href="https://github.com/ComplianceTweaks/ComplianceTweaks/actions"><img alt="Website Deploy" src="https://github.com/ComplianceTweaks/ComplianceTweaks/workflows/Website%20Deploy/badge.svg"></a>
+    <a href="https://github.com/ComplianceTweaks/ComplianceTweaks/actions"><img alt="Functions Deploy" src="https://github.com/ComplianceTweaks/ComplianceTweaks/workflows/Functions%20Deploy/badge.svg"></a>
+    <a href="https://github.com/ComplianceTweaks/ComplianceTweaks/actions"><img alt="Images Deploy" src="https://github.com/ComplianceTweaks/ComplianceTweaks/workflows/Images%20Deploy/badge.svg"></a>
+    <a href="https://github.com/ComplianceTweaks/ComplianceTweaks/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/ComplianceTweaks/ComplianceTweaks"></a>
+    <a href="https://github.com/ComplianceTweaks/ComplianceTweaks/network"><img alt="GitHub forks" src="https://img.shields.io/github/forks/ComplianceTweaks/ComplianceTweaks"></a>
+    <a href="https://github.com/ComplianceTweaks/ComplianceTweaks/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/ComplianceTweaks/ComplianceTweaks"></a>
+    <a href="https://github.com/ComplianceTweaks/ComplianceTweaks/blob/master/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/ComplianceTweaks/ComplianceTweaks"></a>
 </p>
 
-<p align="center"><img src="https://raw.githubusercontent.com/FaithfulTweaks/FaithfulTweaks/master/screenshot.png"></img></p>
+<p align="center"><img src="https://raw.githubusercontent.com/ComplianceTweaks/ComplianceTweaks/master/screenshot.png"></img></p>
 
 ## Get Tn Touch
 - 💬 Come visit us on [Discord][discord]
-- ❗️ Create [an issue](https://github.com/FaithfulTweaks/FaithfulTweaks/issues/new)
+- ❗️ Create [an issue](https://github.com/ComplianceTweaks/ComplianceTweaks/issues/new)
 - 🦜 Check us out on [Twitter][twitter]
 - 🔈 Join us on [Reddit][reddit]
 
@@ -41,7 +41,7 @@ For doumention on the project, please check out [the wiki][wiki].
 ⚠ **NOTE** We try to give credit to those that created the textures but we're not great at keeping track. If you believe some textures are yours please contact us and we'll add you to this list (or take your textures down upon request).
 - [Banakin](https://banakin.github.io): Making the website and various tweaks
 - Doge: FullyAgedCropMarker and AlternateBlockDestruction
-- [The Faithful Team](https://faithful.team/): Making the Faithful Texture Pack
+- [The Compliance Team](https://compliancepack.net/): Making the Compliance Texture Pack
 - [Nekzuris](https://twitter.com/Nekzuris): ColoredPing
 - Pomik108: RainbowXPBar
 - Redcoke26: MelonHunger

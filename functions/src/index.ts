@@ -27,14 +27,14 @@ admin.initializeApp({
 exports.deletePacks = functions.pubsub.schedule('0 4 * * *').onRun(async (cxt) => {
     const bucket = admin.storage().bucket(); // Storage bucket
 
-    // Delete everything in FaithfulTweaks/
+    // Delete everything in ComplianceTweaks/
     bucket.deleteFiles({
-        prefix: 'FaithfulTweaks/'
+        prefix: 'ComplianceTweaks/'
     }, (err) => {
         if (err) {
             console.log(err);
         } else {
-            console.log('All the zip files FaithfulTweaks/ have been deleted');
+            console.log('All the zip files ComplianceTweaks/ have been deleted');
         }
     });
 
@@ -108,7 +108,7 @@ exports.makePack = functions.https.onRequest(async (req, res) => {
     const fileID = nanoid();
     const downloadToken = nanoid();
 
-    const newPackPath = path.join('FaithfulTweaks', fileID + '.zip'); // New file upload path
+    const newPackPath = path.join('ComplianceTweaks', fileID + '.zip'); // New file upload path
 
     // Metadata
     const metadata = {
@@ -168,7 +168,7 @@ function mcMeta(format: string) {
 `{
     "pack": {
         "pack_format": `+packFormat+`,
-        "description": "§aFaithful Tweaks §6- §c`+formatStr+`\\n§b§nfaithfultweaks.com"
+        "description": "§aCompliance Tweaks §6- §c`+formatStr+`\\n§b§nfaithfultweaks.com"
     }
 }`
     );
@@ -209,13 +209,13 @@ function moduleSelection(format: string, modules: string[], iconModules: string[
 
     }
 
-    return ('Faithful Tweaks generated pack\nVersion: '+format+'\n'+modStr+hudStr+optionsStr+panoStr);
+    return ('Compliance Tweaks generated pack\nVersion: '+format+'\n'+modStr+hudStr+optionsStr+panoStr);
 }
 
 // The credits.txt file contents
 const creditsTxt = `Credits:
-Vanilla Tweaks by Xisumavoid: https://www.xisumavoid.com/vanillatweaks
-Faithful Textures by xMrVizzy: https://faithful.team
+Vanilla Tweaks by the Vanilla Tweaks team: https://vanillatweaks.net/
+Compliance Textures by the Compliance team: https://compliancepack.net/
 
-This pack is a modification of The Faithful 32x pack. 
+This pack is a modification of The Compliance 32x pack. 
 Modifications are based off of/inspired by the packs by Vanilla tweaks.`

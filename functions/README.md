@@ -1,4 +1,4 @@
-[wiki]: https://github.com/FaithfulTweaks/FaithfulTweaks/wiki
+[wiki]: https://github.com/ComplianceTweaks/ComplianceTweaks/wiki
 [node]: https://nodejs.org/
 [typescript]: https://www.typescriptlang.org/
 
@@ -27,7 +27,7 @@ To test out pack creation, run the cloud function with `npm run serve` and then 
 #### Example Response From POST Request
 ```json
 {
-    "url": "https://firebasestorage.googleapis.com/v0/b/faithfultweaks-app.appspot.com/o/FaithfulTweaks%2FXXXXXXXXXX.zip?alt=media&token=XXXXXXXXXX"
+    "url": "https://firebasestorage.googleapis.com/v0/b/faithfultweaks-app.appspot.com/o/ComplianceTweaks%2FXXXXXXXXXX.zip?alt=media&token=XXXXXXXXXX"
 }
 ```
 

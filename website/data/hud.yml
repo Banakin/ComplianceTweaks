@@ -16,7 +16,7 @@ modules:
     name: "Blue Wither Hearts"
     image: "/images/modules/hud/BlueWitherHearts.png"
     description: "Makes Hearts blue for better visibility while you're under the wither effect."
-    origin: "faithfultweaks"
+    origin: "compliancetweaks"
     
   - id: "RainbowXP"
     name: "Rainbow XP Bar"
@@ -33,10 +33,10 @@ conflictingModules:
       name: "Melon Hunger"
       image: "/images/modules/hud/MelonHunger.png"
       description: "Replaces hunger bar with melon icons."
-      origin: "faithfultweaks"
+      origin: "compliancetweaks"
       
     - id: "BreadHunger"
       name: "Bread Hunger"
       image: "/images/modules/hud/BreadHunger.png"
       description: "Replaces hunger bar with bread icons."
-      origin: "faithfultweaks"
+      origin: "compliancetweaks"

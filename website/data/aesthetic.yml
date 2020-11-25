@@ -52,7 +52,7 @@ modules:
     name: "Alternate Entities"
     image: "/images/modules/aesthetic/AlternateEntities.png"
     description: "Adds variants to a lot of entities."
-    origin: "faithfultweaks"
+    origin: "compliancetweaks"
     notcompatible:
       - 1-8
       - 1-9
@@ -333,7 +333,7 @@ modules:
     name: "CodeCrafted's Wool"
     image: "/images/modules/aesthetic/CodeCraftedWool.png"
     description: "Makes wool the same style as CodeCrafted's but with 1 pixel edges."
-    origin: "faithfultweaks"
+    origin: "compliancetweaks"
     conflicting:
       - SofterWool
     notcompatible:

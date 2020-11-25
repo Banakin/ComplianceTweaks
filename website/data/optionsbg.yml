@@ -28,7 +28,7 @@ modules:
   - id: "BetterBedrockBG"
     name: "Better Bedrock"
     image: "/images/modules/optionsbg/BetterBedrock.png"
-    origin: "faithfultweaks"
+    origin: "compliancetweaks"
 
   - id: "BirchPlanksBG"
     name: "Birch Planks"
@@ -73,7 +73,7 @@ modules:
   - id: "NetherrackBrightBG"
     name: "Bright Netherrack"
     image: "/images/modules/optionsbg/NetherrackBright.png"
-    origin: "faithfultweaks"
+    origin: "compliancetweaks"
 
   - id: "OakPlanksBG"
     name: "Oak Planks"
@@ -83,12 +83,12 @@ modules:
   - id: "ObsidianBG"
     name: "Obsidian"
     image: "/images/modules/optionsbg/Obsidian.png"
-    origin: "faithfultweaks"
+    origin: "compliancetweaks"
 
   - id: "PebblelessDirtBG"
     name: "Pebbleless Dirt"
     image: "/images/modules/optionsbg/PebblelessDirt.png"
-    origin: "faithfultweaks"
+    origin: "compliancetweaks"
 
   - id: "SprucePlanksBG"
     name: "Spruce Planks"

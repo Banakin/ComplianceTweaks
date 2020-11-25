@@ -1,4 +1,4 @@
-[wiki]: https://github.com/FaithfulTweaks/FaithfulTweaks/wiki
+[wiki]: https://github.com/ComplianceTweaks/ComplianceTweaks/wiki
 [hugo]: https://gohugo.io/
 [node]: https://nodejs.org/
 [webpack]: https://webpack.js.org/

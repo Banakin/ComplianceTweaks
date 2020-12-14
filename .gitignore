@@ -84,3 +84,6 @@ Storage/packfiles/modules/.DS_Store
 Storage/packfiles/.DS_Store
 Storage/.DS_Store
 .DS_Store
+
+# Local Netlify folder
+.netlify

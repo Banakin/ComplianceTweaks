@@ -19,7 +19,7 @@ import { APIGatewayEvent, Context } from 'aws-lambda';
 
 // GCP Storage Bucket
 import { Storage } from "@google-cloud/storage";
-const bucket = new Storage({keyFilename: './GCPBucketKey.json'}).bucket('faithfultweaks-app.appspot.com'); // Storage Bucket
+const bucket = new Storage({keyFilename: 'GCPBucketKey.json'}).bucket('faithfultweaks-app.appspot.com'); // Storage Bucket
 
 // Delete all the genrated packs every day (ABOUT MIDNIGHT EST)
 // exports.deletePacks = functions.pubsub.schedule('0 4 * * *').onRun(async (cxt) => {
@@ -129,7 +129,7 @@ export const handler = async (event: APIGatewayEvent, context: Context) => {
                     headers: {
                         "Access-Control-Allow-Headers" : "Content-Type",
                         "Access-Control-Allow-Origin": (process.env.NODE_ENV !== 'production' ? '*' : 'https://faithfultweaks.com'),
-                        "Access-Control-Allow-Methods": "POST",
+                        "Access-Control-Allow-Methods": "GET,POST",
                         "Content-Type": 'application/json',
                     },
                     body: JSON.stringify({ "url": "https://firebasestorage.googleapis.com/v0/b/" + bucket.name + "/o/" + encodeURIComponent(file.name) + "?alt=media&token=" + downloadToken }),

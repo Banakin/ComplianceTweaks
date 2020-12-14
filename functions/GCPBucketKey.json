@@ -1,0 +1,13 @@
+{
+    "type": "service_account",
+    "project_id": "faithfultweaks-app",
+    "private_key_id": "9ec67fff41f3c9d238def4f271d27e31f21381dd",
+    "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDoKYu0G045KnMl\n+8cUiOR8kVfy49RBuzX2GId2eA0ggNaRiMPNVUojM3rzWfdLv0vttWWObu48NZud\nGhStZpQSnOnatI9xEG1m/IkEEmcFk16dKv0JvCUe+o8ziKj0BMs4aAuGU9qzUCEg\nmRWRGCA7GpOKkfmHQhm7CtLCtSzdpRLGMRquWF6SuG9gXr/7k5soeK19zi21C3eX\nwYHrUIpFYla3IpBnjOOcMeE5sE3gdkl+561rfQe+N1zzvRPSdeugBUCuRzgyzYDD\ny07ky0JA461Na2l/Zp+FeGcCORuPWtPwWAfYDvGaKlE3dBAckDr/ACEJnM+m/1jl\nhzgg78GdAgMBAAECggEAMw3P1w+aKCAZqmSv5ugjtvEPci5/4uSUfUXvpDHKUTeD\n+AUnaeQzpYIQq6tBIrsyq1eUubnTUhJH4kh1+5vvPBidpKbIVIjURi2KxAZ3+VXr\nHIzzkEx7rVBUZXTMEr1rI0BeKHAQTBZ28oA3qeywSc8SWwq24PO8TNGYf5DwCN11\nBhkjrz5ZlDcTKclmYVYlPQCwVC4dBI73wfuHU7TbU1yhd/MVUA2zimQxfrlLgY1z\nzAez1rCeIYVHm0xpbc2Yyp/OfUB0rMSnT4+SyhwMqKoe2dC3r4F4sdeYghMeLFjU\nTkRvpVqfMskhr8b4Kq7kXO8cOuoH3PCnitI9FaQVAQKBgQD0lpMAGCuu5jQa8QiM\ny9OQBjdJp/3IsI5o8JLAtbQLE0GHZGmzvsGeDIX+StP0qqhP06EpszwoYwLMIeUW\n24H+Q5KbCriZy0Mipfj1Qtmm+Bmv350yVPWRQX8trLe7kanxanwlg8jXlqxCUxh9\nqe4FfWHbDyTUqxooAqJRSSB4DQKBgQDy/o2owTIkgjq7KSCftIluDZ272mOXxa3L\nENl4HFBGfhVbEmkMWbsUP+KHAtkKXO/qAuQuWAqA0br50vruyTZ07Jn9cLPjBNNo\nWBqjo4cM9GarAoZa+NOsFYAcGhzVBeEwRQvhlj2i+glh74BOkFmcZH8PlnVfimqL\n+/GfJ1370QKBgQCAWW/EkeqCem0HYksBT4iywIBM16oWoYfpy6zHEdLsKOuvN+M8\nHrMN1DaQbgXyE4gFc+HTtymva92w72x/ZSs/GYiacbLTidWuHfiaA72hn/oiz653\nFhxTYFJzznoQJO1QMXf6W8COWZQFrgNhFkZAfT5XrQe/zhYIvvEcxMoUFQKBgG+x\nKhQjmZTGd5CH+wLtzS3U/GfYnmao6pWojQ10lkGQuug9siOHK0LHiqxcVr84sN5z\nrcbPmSRVQwiKPeV8f5eHGdEw+L6k/Te9J6GIDQ+bV4XLh05RiZpT16sTJaWVKkkx\ns6BhmrtLCv0FRYjXORl16CGWGyVrTkZB7HInej/BAoGBAO1iLhw/Cs9FKsfsu+c9\nybl9Qi0c+7rhrtSqmSdFoQerv6j1Bo2EeLybxf9hfNGI2+BHoNF/qv7tIUXGXWJY\nN4t5RiJFR840oYp4cIcwj0a0j6dM13G9baTt66GRm8xZh27DeFl4lxertT7xBMMv\nTxWH1snsOGShcy8X6/jStGhR\n-----END PRIVATE KEY-----\n",
+    "client_email": "faithfultweaks-app@appspot.gserviceaccount.com",
+    "client_id": "115103595741033821388",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/faithfultweaks-app%40appspot.gserviceaccount.com"
+}
+  

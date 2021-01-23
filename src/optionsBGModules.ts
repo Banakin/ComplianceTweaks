@@ -1,36 +1,30 @@
-import * as path from 'path';
+import path from 'path';
 import { Archiver } from 'archiver';
+import fs from 'fs';
 
-const packFilesPath = "modules/optionsBG";
+// Dotenv
+import dotenv from "dotenv";
+dotenv.config();
+
+// Environment variables
+import { defaultAssetsPath, defaultConfigPath, defaultImagesPath, defaultOptionsBGMappingFile, defaultOptionsBGImagesPath } from './defaults';
+const assetsPath: string = path.normalize(process.env.ASSETS_PATH ?? defaultAssetsPath);
+const configPath: string = path.normalize(process.env.CONFIG_PATH ?? defaultConfigPath);
+const imagesPath: string = path.normalize(process.env.IMAGES_PATH ?? defaultImagesPath);
+const optionsBGMappingFile: string = path.normalize(process.env.OPTIONS_BG_MAPPING_FILE ?? defaultOptionsBGMappingFile);
+const optionsBGImagesPath: string = path.normalize(process.env.OPTIONS_BG_IMAGES_PATH ?? defaultOptionsBGImagesPath);
+
 const inPackName = "options_background.png";
 const inPackPath = "assets/minecraft/textures/gui";
-const files: Record<string, string> = {
-    AcaciaPlanksBG: "AcaciaPlanks.png",
-    AncientDebrisBG: "AncientDebris.png",
-    AndesiteBG: "andesite.png",
-    BedrockBG: "bedrock.png",
-    BetterBedrockBG: "BetterBedrock.png",
-    BirchPlanksBG: "BirchPlanks.png",
-    DarkOakPlanksBG: "DarkOakPlanks.png",
-    DioriteBG: "diorite.png",
-    EndStoneBG: "EndStone.png",
-    GraniteBG: "granite.png",
-    HoneycombBG: "HoneycombBlock.png",
-    JunglePlanksBG: "JunglePlanks.png",
-    NetherrackBG: "netherack.png",
-    NetherrackBrightBG: "NetherackBright.png",
-    OakPlanksBG: "OakPlanks.png",
-    ObsidianBG: "obsidian.png",
-    PebblelessDirtBG: "PebblelessDirt.png",
-    SprucePlanksBG: "SprucePlanks.png",
-    StoneBG: "stone.png",
-};
+
+// Data
+const files = JSON.parse(fs.readFileSync(path.join(assetsPath, configPath, optionsBGMappingFile), 'utf8'));
 
 export async function addOptionsBG(moduleName: string, archive: Archiver){
     // If it exists
     if (files[moduleName] !== undefined && files[moduleName] !== null) {
         
-        archive.file(path.join('images', packFilesPath, files[moduleName]), {name: path.join(inPackPath, inPackName)});
+        archive.file(path.join(assetsPath, imagesPath, optionsBGImagesPath, files[moduleName]), {name: path.join(inPackPath, inPackName)});
     }
     return;
 };

@@ -1,5 +1,7 @@
 # The assets folder should not be included in this repository
 assets/
+dist/
+app/
 
 # Logs
 logs

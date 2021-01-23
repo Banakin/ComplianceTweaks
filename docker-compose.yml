@@ -1,0 +1,9 @@
+version: "3"
+
+services:
+  compliance-server:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - "./assets:/usr/src/app/assets"

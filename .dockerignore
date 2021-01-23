@@ -1,0 +1,17 @@
+assets/
+node_modules/
+.github/
+
+.dockerignore
+.gitignore
+.prettierignore
+.prettierrc.json
+CODE_OF_CONDUCT.md
+CONTRIBUTING.md
+docker-compose.yml
+Dockerfile
+example.env
+LICENSE
+logo.png
+README.md
+screenshot.png

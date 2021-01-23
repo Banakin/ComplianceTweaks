@@ -10,7 +10,6 @@
     "start": "node dist/index.js"
   },
   "dependencies": {
-    "@google-cloud/storage": "^5.7.2",
     "archiver": "^5.2.0",
     "canvas": "^2.6.1",
     "cors": "^2.8.5",

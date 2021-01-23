@@ -6,17 +6,11 @@ import { addMenuPanorama } from "./panoramaModules";
 
 // Archiver
 import archiver from 'archiver';
-import fs from 'fs';
-import os from 'os';
 import path from 'path';
 
 // Usefull tools
 import { customAlphabet } from 'nanoid';
 const nanoid = customAlphabet('1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ', 10);
-
-// GCP Storage Bucket
-// import { Storage } from "@google-cloud/storage";
-// const bucket = new Storage({keyFilename: 'GCPBucketKey.json'}).bucket('faithfultweaks-app.appspot.com'); // Storage Bucket
 
 // Dotenv
 import * as dotenv from "dotenv";
@@ -39,8 +33,6 @@ app.use(cors({
 app.get('/', (req, res) => { res.status(200).send('<h1><a href="https://github.com/ComplianceTweaks/ComplianceTweaks">Compliance Tweaks Server</a></h1>') })
 
 app.get('/makePack', async (req, res) => {
-        // const tempFilePath = path.join(os.tmpdir(), 'texturepack.zip'); // Zip path
-
         // Set the file id
         const fileID = nanoid();
 
@@ -97,41 +89,15 @@ app.get('/makePack', async (req, res) => {
         if (panoOption !== undefined && panoOption !== null) {
             await addMenuPanorama(panoOption, archive); // Add menu panorama
         }
-
-        await archive.finalize(); // finalize the archive
-
-        // ----- UPLOAD THE ARCHIVE -----
-        // const fileID = nanoid();
-        // const downloadToken = nanoid();
-
-        // const newPackPath = path.join('ComplianceTweaks', fileID + '.zip'); // New file upload path
-
-        // Metadata
-        // const metadata = {
-        //     contentType: 'application/zip',
-        //     metadata: {
-        //         firebaseStorageDownloadTokens: downloadToken,
-        //     }
-        // };
+        
+        // finalize the archive
+        await archive.finalize();
         
         // Log and upload when file has been made
-        res.on('close', async () => {
-            console.log('Archiver has been finalized and the output file descriptor has closed. File size: ' + archive.pointer() + ' bytes');
-            
-            // // Actual upload
-            // await bucket.upload(tempFilePath, {
-            //     destination: newPackPath,
-            //     metadata: metadata,
-            // }).then((data) => {
-            //     const file = data[0];
-            //     // Respond with URL
-            //     res.status(200).send({ "url": "https://firebasestorage.googleapis.com/v0/b/" + bucket.name + "/o/" + encodeURIComponent(file.name) + "?alt=media&token=" + downloadToken });
-            //     fs.unlinkSync(tempFilePath); // Unlink file
-            //     return;
-            // });
-        });
+        res.on('close', () => { console.log('Archiver has been finalized and the output file descriptor has closed. File size: ' + archive.pointer() + ' bytes') });
 
-        res.on('drain', () => { console.log('Data has been drained'); }); // Log when file is drained
+        // Log when file is drained
+        res.on('drain', () => { console.log('Data has been drained'); });
 });
 
 // Make the mcmeta file
@@ -152,9 +118,12 @@ function mcMeta(format: string) {
         packFormat = 5;
     } else if (format === "1.16.2") {
         packFormat = 6;
-        formatStr = "1.16.2 - Latest";
+        formatStr = "1.16.2 - 1.16.5";
+    } else if (format === "1.17") {
+        packFormat = 7;
+        formatStr = "1.17";
     } else {
-        packFormat = 1
+        packFormat = 0;
         formatStr = "Error making pack";
     }
 

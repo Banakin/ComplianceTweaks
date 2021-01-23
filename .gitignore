@@ -1,5 +1,5 @@
-serviceaccount.json
-filenames.txt
+# The assets folder should not be included in this repository
+assets/
 
 # Logs
 logs

@@ -1,15 +1,6 @@
 serviceaccount.json
 filenames.txt
 
-# Hugo
-website/static/packaged
-website/resources
-website/public
-
-# Functions
-/functions/lib/
-/functions/typings/
-
 # Logs
 logs
 *.log
@@ -17,16 +8,6 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 firebase-debug.log*
-
-# Firebase cache
-.firebase/
-
-# Firebase config
-
-# Uncomment this if you'd like others to create their own Firebase project.
-# For a team working on the same Firebase project(s), it is recommended to leave
-# it commented so all members can deploy to the same project(s) in .firebaserc.
-# .firebaserc
 
 # Runtime data
 pids
@@ -77,10 +58,4 @@ node_modules/
 .env
 
 # macOS files
-Storage/packfiles/modules/UnobtrusiveWater/.DS_Store
-Storage/packfiles/modules/UnobtrusiveScaffolding/.DS_Store
-Storage/packfiles/modules/UnobtrusiveRain/.DS_Store
-Storage/packfiles/modules/.DS_Store
-Storage/packfiles/.DS_Store
-Storage/.DS_Store
 .DS_Store

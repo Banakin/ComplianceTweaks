@@ -5,25 +5,24 @@
 
 <h1 align="center">
     <br>
-    <a href="https://faithfultweaks.com/"><img src="https://raw.githubusercontent.com/ComplianceTweaks/ComplianceTweaks/compliance/website/static/images/logo.png" alt="Compliance Tweaks" width="200"></a>
+    <a href="https://faithfultweaks.com/"><img src="logo.png" alt="Compliance Tweaks" width="200"></a>
     <br>
-    Compliance Tweaks
+    Compliance Tweaks Server
     <br>
 </h1>
 
-<p align="center">An open source recreation of <a href="https://vanillatweaks.net/picker/resource-packs/">Vanilla Tweaks</a> for the Compliance x32 Texturepack by <a href="https://compliancepack.net/">The Compliance Team</a>.</p>
+<p align="center">The server for an open source recreation of <a href="https://vanillatweaks.net/picker/resource-packs/">Vanilla Tweaks</a> built for the Compliance x32 Texturepack by <a href="https://compliancepack.net/">The Compliance Team</a>.</p>
 
 <p align="center">
-    <a href="https://github.com/ComplianceTweaks/ComplianceTweaks/actions"><img alt="Website Deploy" src="https://github.com/ComplianceTweaks/ComplianceTweaks/workflows/Website%20Deploy/badge.svg"></a>
-    <a href="https://github.com/ComplianceTweaks/ComplianceTweaks/actions"><img alt="Functions Deploy" src="https://github.com/ComplianceTweaks/ComplianceTweaks/workflows/Functions%20Deploy/badge.svg"></a>
-    <a href="https://github.com/ComplianceTweaks/ComplianceTweaks/actions"><img alt="Images Deploy" src="https://github.com/ComplianceTweaks/ComplianceTweaks/workflows/Images%20Deploy/badge.svg"></a>
+    <a href="https://github.com/ComplianceTweaks/ComplianceTweaks/actions"><img alt="Build" src="https://github.com/ComplianceTweaks/ComplianceTweaks/workflows/Build/badge.svg"></a>
+    <a href="https://github.com/ComplianceTweaks/ComplianceTweaks/actions"><img alt="Deploy" src="https://github.com/ComplianceTweaks/ComplianceTweaks/workflows/Deploy/badge.svg"></a>
     <a href="https://github.com/ComplianceTweaks/ComplianceTweaks/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/ComplianceTweaks/ComplianceTweaks"></a>
     <a href="https://github.com/ComplianceTweaks/ComplianceTweaks/network"><img alt="GitHub forks" src="https://img.shields.io/github/forks/ComplianceTweaks/ComplianceTweaks"></a>
     <a href="https://github.com/ComplianceTweaks/ComplianceTweaks/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/ComplianceTweaks/ComplianceTweaks"></a>
     <a href="https://github.com/ComplianceTweaks/ComplianceTweaks/blob/master/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/ComplianceTweaks/ComplianceTweaks"></a>
 </p>
 
-<p align="center"><img src="https://raw.githubusercontent.com/ComplianceTweaks/ComplianceTweaks/master/screenshot.png"></img></p>
+<p align="center"><img src="screenshot.png"></img></p>
 
 ## Get Tn Touch
 - 💬 Come visit us on [Discord][discord]

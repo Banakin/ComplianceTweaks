@@ -1,8 +1,0 @@
-{
-    "recommendations": [
-        "dbaeumer.vscode-eslint",
-        "redhat.vscode-yaml",
-        "bungcip.better-toml",
-        "eg2.vscode-npm-script"
-    ]
-}

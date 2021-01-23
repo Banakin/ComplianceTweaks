@@ -1,6 +1,5 @@
 [discord]:https://discord.gg/kBMEmDD
-[twitter]:https://twitter.com/faithfultweaks
-[reddit]:https://www.reddit.com/r/FaithfulTweaks/
+[twitter]:https://twitter.com/Compliance32x
 [wiki]:https://github.com/ComplianceTweaks/ComplianceTweaks/wiki
 
 <h1 align="center">
@@ -26,9 +25,8 @@
 
 ## Get Tn Touch
 - 💬 Come visit us on [Discord][discord]
-- ❗️ Create [an issue](https://github.com/ComplianceTweaks/ComplianceTweaks/issues/new)
+- ❗️ Create [an issue](https://github.com/Compliance-Resource-Pack/ComplianceTweaksServer/issues/new)
 - 🦜 Check us out on [Twitter][twitter]
-- 🔈 Join us on [Reddit][reddit]
 
 ## Contributing
 There are two different categories for contributions. To contribute please read [CONTRIBUTING.md](CONTRIBUTING.md).

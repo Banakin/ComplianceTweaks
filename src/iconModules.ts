@@ -2,15 +2,25 @@
 // IMPORTS
 import { Archiver } from "archiver";
 import * as path from 'path';
-import fs from 'fs';
+// import fs from 'fs';
 
-// Defaults
-import { defaultAssetsPath } from './defaults';
+// Dotenv
+import dotenv from "dotenv";
+dotenv.config();
+
+// Environment variables
+import { defaultAssetsPath, defaultImagesPath, defaultIconsImagesPath } from './defaults'; // defaultConfigPath, defaultIconsMappingFile
+const assetsPath: string = path.normalize(process.env.ASSETS_PATH ?? defaultAssetsPath);
+// const configPath: string = path.normalize(process.env.CONFIG_PATH ?? defaultConfigPath);
+const imagesPath: string = path.normalize(process.env.IMAGES_PATH ?? defaultImagesPath);
+// const iconsMappingFile: string = path.normalize(process.env.ICONS_MAPPING_FILE ?? defaultIconsMappingFile);
+const iconsImagesPath: string = path.normalize(process.env.ICONS_IMAGES_PATH ?? defaultIconsImagesPath);
 
 // Image merging
 import { createCanvas, Image } from 'canvas';
 
-const assetsPath: string = path.normalize(process.env.ASSETS_PATH ?? defaultAssetsPath);
+// Data
+// const icons = JSON.parse(fs.readFileSync(path.join(assetsPath, configPath, iconsMappingFile), 'utf8'));
 
 // Figure out which modules to add
 export async function addIconModules(modules: string[], archive: Archiver){
@@ -74,41 +84,41 @@ export async function addIconModules(modules: string[], archive: Archiver){
     // If something is set then create an icons.png file
 
         // Get defualt icons.png
-        defaultIcons.src = path.join(`./${assetsPath}/images`, "modules/hud", "default.png");
+        defaultIcons.src = path.join(assetsPath, imagesPath, iconsImagesPath, "default.png");
 
         // Get crosshair icons
         if (crosshairMode === 0) {
-            crosshairIcons.src = path.join(`./${assetsPath}/images`, "modules/hud", "crosshair", "default.png");
+            crosshairIcons.src = path.join(assetsPath, imagesPath, iconsImagesPath, "crosshair", "default.png");
         }
 
         // Get hunger icons
         if (hungerMode === 0) {
-            hungerIcons.src = path.join(`./${assetsPath}/images`, "modules/hud", "hunger", "default.png");
+            hungerIcons.src = path.join(assetsPath, imagesPath, iconsImagesPath, "hunger", "default.png");
         } else if (hungerMode === 1) {
-            hungerIcons.src = path.join(`./${assetsPath}/images`, "modules/hud", "hunger", "melons.png");
+            hungerIcons.src = path.join(assetsPath, imagesPath, iconsImagesPath, "hunger", "melons.png");
         } else if (hungerMode === 2) {
-            hungerIcons.src = path.join(`./${assetsPath}/images`, "modules/hud", "hunger", "bread.png");
+            hungerIcons.src = path.join(assetsPath, imagesPath, iconsImagesPath, "hunger", "bread.png");
         }
 
         // Get ping icons
         if (pingMode === 0) {
-            pingIcons.src = path.join(`./${assetsPath}/images`, "modules/hud", "ping", "default.png");
+            pingIcons.src = path.join(assetsPath, imagesPath, iconsImagesPath, "ping", "default.png");
         } else if (pingMode === 1) {
-            pingIcons.src = path.join(`./${assetsPath}/images`, "modules/hud", "ping", "colored.png");
+            pingIcons.src = path.join(assetsPath, imagesPath, iconsImagesPath, "ping", "colored.png");
         }
 
         // Get wither icons
         if (witherHeartsMode === 0) {
-            witherIcons.src = path.join(`./${assetsPath}/images`, "modules/hud", "witherhearts", "default.png");
+            witherIcons.src = path.join(assetsPath, imagesPath, iconsImagesPath, "witherhearts", "default.png");
         } else if (witherHeartsMode === 1) {
-            witherIcons.src = path.join(`./${assetsPath}/images`, "modules/hud", "witherhearts", "blue.png");
+            witherIcons.src = path.join(assetsPath, imagesPath, iconsImagesPath, "witherhearts", "blue.png");
         }
 
         // Get XP icons
         if (xpMode === 0) {
-            xpIcons.src = path.join(`./${assetsPath}/images`, "modules/hud", "xp", "default.png");
+            xpIcons.src = path.join(assetsPath, imagesPath, iconsImagesPath, "xp", "default.png");
         } else if (xpMode === 1) {
-            xpIcons.src = path.join(`./${assetsPath}/images`, "modules/hud", "xp", "rainbow.png");
+            xpIcons.src = path.join(assetsPath, imagesPath, iconsImagesPath, "xp", "rainbow.png");
         }
 
         // Mix the images together

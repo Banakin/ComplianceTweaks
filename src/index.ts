@@ -4,26 +4,28 @@ import { addIconModules } from "./iconModules";
 import { addOptionsBG } from "./optionsBGModules";
 import { addMenuPanorama } from "./panoramaModules";
 
-// Defaults
-import { defaultAssetsPath } from './defaults';
-
 // Archiver
 import archiver from 'archiver';
 import path from 'path';
-
-// Usefull tools
-import { customAlphabet } from 'nanoid';
-const nanoid = customAlphabet('1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ', 10);
 
 // Dotenv
 import dotenv from "dotenv";
 dotenv.config();
 
+// Environment variables
+import { defaultAssetsPath, defaultImagesPath } from './defaults';
+const assetsPath: string = path.normalize(process.env.ASSETS_PATH ?? defaultAssetsPath);
+const imagesPath: string = path.normalize(process.env.IMAGES_PATH ?? defaultImagesPath);
+
+// Usefull tools
+import { customAlphabet } from 'nanoid';
+const nanoid = customAlphabet('1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ', 10);
+
 // Express
 import express from 'express';
 import cors from 'cors';
 const app = express();
-const port = process.env.PORT || '3000';
+const port = process.env.PORT ?? '3000';
 app.use(express.json()) // for parsing application/json
 app.use(express.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
 // CORS
@@ -45,9 +47,6 @@ app.get('/makePack', async (req, res) => {
         const iconModules: string[] = req.body.iconModules;
         const optionsBackground: string = req.body.optionsBackground;
         const panoOption: string = req.body.panoOption;
-
-        // Get assets folder location
-        const assetsPath: string = path.normalize(process.env.ASSETS_PATH || defaultAssetsPath);
 
         // ----- CREATE THE ARCHIVE -----
         // const output = fs.createWriteStream(tempFilePath); // create a file to stream archive data to.
@@ -78,7 +77,7 @@ app.get('/makePack', async (req, res) => {
         archive.append(creditsTxt, {name: 'credits.txt'}); // add credits.txt file
         
         // Add pack icon
-        archive.file(path.join(`./${assetsPath}/images`, 'pack.png'), {name: 'pack.png'});
+        archive.file(path.join(assetsPath, imagesPath, 'pack.png'), {name: 'pack.png'});
         
         if (modules !== undefined && modules !== null) {
             await addModules(format, archive, modules); // Add modules to the pack

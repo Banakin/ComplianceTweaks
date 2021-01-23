@@ -5,7 +5,7 @@
 
 <h1 align="center">
     <br>
-    <a href="https://faithfultweaks.com/"><img src="https://raw.githubusercontent.com/ComplianceTweaks/ComplianceTweaks/compliance/website/static/images/logo.png" alt="Compliance Tweaks" width="200"></a>
+    <a href="https://faithfultweaks.com/"><img src="logo.png" alt="Compliance Tweaks" width="200"></a>
     <br>
     Compliance Tweaks Server
     <br>
@@ -22,7 +22,7 @@
     <a href="https://github.com/ComplianceTweaks/ComplianceTweaks/blob/master/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/ComplianceTweaks/ComplianceTweaks"></a>
 </p>
 
-<p align="center"><img src="https://raw.githubusercontent.com/ComplianceTweaks/ComplianceTweaks/master/screenshot.png"></img></p>
+<p align="center"><img src="screenshot.png"></img></p>
 
 ## Get Tn Touch
 - 💬 Come visit us on [Discord][discord]

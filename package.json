@@ -5,7 +5,7 @@
   "repository": "git@github.com:ComplianceTweaks/ComplianceTweaks.git",
   "license": "GPL-3.0-or-later",
   "engines" : {
-    "node" : ">=14.0.0"
+    "node" : "14.15.4"
   },
   "scripts": {
     "dev": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts",

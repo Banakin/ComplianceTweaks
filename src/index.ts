@@ -4,6 +4,9 @@ import { addIconModules } from "./iconModules";
 import { addOptionsBG } from "./optionsBGModules";
 import { addMenuPanorama } from "./panoramaModules";
 
+// Defaults
+import { defaultAssetsPath } from './defaults';
+
 // Archiver
 import archiver from 'archiver';
 import path from 'path';
@@ -13,7 +16,7 @@ import { customAlphabet } from 'nanoid';
 const nanoid = customAlphabet('1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ', 10);
 
 // Dotenv
-import * as dotenv from "dotenv";
+import dotenv from "dotenv";
 dotenv.config();
 
 // Express
@@ -42,6 +45,9 @@ app.get('/makePack', async (req, res) => {
         const iconModules: string[] = req.body.iconModules;
         const optionsBackground: string = req.body.optionsBackground;
         const panoOption: string = req.body.panoOption;
+
+        // Get assets folder location
+        const assetsPath: string = path.normalize(process.env.ASSETS_PATH || defaultAssetsPath);
 
         // ----- CREATE THE ARCHIVE -----
         // const output = fs.createWriteStream(tempFilePath); // create a file to stream archive data to.
@@ -72,7 +78,7 @@ app.get('/makePack', async (req, res) => {
         archive.append(creditsTxt, {name: 'credits.txt'}); // add credits.txt file
         
         // Add pack icon
-        archive.file(path.join('images', 'pack.png'), {name: 'pack.png'});
+        archive.file(path.join(`./${assetsPath}/images`, 'pack.png'), {name: 'pack.png'});
         
         if (modules !== undefined && modules !== null) {
             await addModules(format, archive, modules); // Add modules to the pack

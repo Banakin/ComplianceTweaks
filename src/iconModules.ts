@@ -2,9 +2,15 @@
 // IMPORTS
 import { Archiver } from "archiver";
 import * as path from 'path';
+import fs from 'fs';
+
+// Defaults
+import { defaultAssetsPath } from './defaults';
 
 // Image merging
 import { createCanvas, Image } from 'canvas';
+
+const assetsPath: string = path.normalize(process.env.ASSETS_PATH ?? defaultAssetsPath);
 
 // Figure out which modules to add
 export async function addIconModules(modules: string[], archive: Archiver){
@@ -68,41 +74,41 @@ export async function addIconModules(modules: string[], archive: Archiver){
     // If something is set then create an icons.png file
 
         // Get defualt icons.png
-        defaultIcons.src = path.join("images", "modules/hud", "default.png");
+        defaultIcons.src = path.join(`./${assetsPath}/images`, "modules/hud", "default.png");
 
         // Get crosshair icons
         if (crosshairMode === 0) {
-            crosshairIcons.src = path.join("images", "modules/hud", "crosshair", "default.png");
+            crosshairIcons.src = path.join(`./${assetsPath}/images`, "modules/hud", "crosshair", "default.png");
         }
 
         // Get hunger icons
         if (hungerMode === 0) {
-            hungerIcons.src = path.join("images", "modules/hud", "hunger", "default.png");
+            hungerIcons.src = path.join(`./${assetsPath}/images`, "modules/hud", "hunger", "default.png");
         } else if (hungerMode === 1) {
-            hungerIcons.src = path.join("images", "modules/hud", "hunger", "melons.png");
+            hungerIcons.src = path.join(`./${assetsPath}/images`, "modules/hud", "hunger", "melons.png");
         } else if (hungerMode === 2) {
-            hungerIcons.src = path.join("images", "modules/hud", "hunger", "bread.png");
+            hungerIcons.src = path.join(`./${assetsPath}/images`, "modules/hud", "hunger", "bread.png");
         }
 
         // Get ping icons
         if (pingMode === 0) {
-            pingIcons.src = path.join("images", "modules/hud", "ping", "default.png");
+            pingIcons.src = path.join(`./${assetsPath}/images`, "modules/hud", "ping", "default.png");
         } else if (pingMode === 1) {
-            pingIcons.src = path.join("images", "modules/hud", "ping", "colored.png");
+            pingIcons.src = path.join(`./${assetsPath}/images`, "modules/hud", "ping", "colored.png");
         }
 
         // Get wither icons
         if (witherHeartsMode === 0) {
-            witherIcons.src = path.join("images", "modules/hud", "witherhearts", "default.png");
+            witherIcons.src = path.join(`./${assetsPath}/images`, "modules/hud", "witherhearts", "default.png");
         } else if (witherHeartsMode === 1) {
-            witherIcons.src = path.join("images", "modules/hud", "witherhearts", "blue.png");
+            witherIcons.src = path.join(`./${assetsPath}/images`, "modules/hud", "witherhearts", "blue.png");
         }
 
         // Get XP icons
         if (xpMode === 0) {
-            xpIcons.src = path.join("images", "modules/hud", "xp", "default.png");
+            xpIcons.src = path.join(`./${assetsPath}/images`, "modules/hud", "xp", "default.png");
         } else if (xpMode === 1) {
-            xpIcons.src = path.join("images", "modules/hud", "xp", "rainbow.png");
+            xpIcons.src = path.join(`./${assetsPath}/images`, "modules/hud", "xp", "rainbow.png");
         }
 
         // Mix the images together

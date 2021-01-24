@@ -6,5 +6,4 @@ RUN npm i
 COPY . ./
 EXPOSE 3000
 RUN npm run build
-RUN ls && pwd
 CMD [ "npm", "start" ]

@@ -2,7 +2,6 @@
   "compilerOptions": {
     "target": "ESNext",
     "lib": ["ESNext"],
-    "noEmit": true,
     "module": "commonjs",
     "outDir": "./dist",
     "strict": true,
@@ -10,5 +9,6 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true
   },
-  "include": ["./src/**/*"]
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
 }

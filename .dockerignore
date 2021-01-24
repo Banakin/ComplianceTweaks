@@ -11,6 +11,7 @@ CONTRIBUTING.md
 docker-compose.yml
 Dockerfile
 example.env
+.env
 LICENSE
 logo.png
 README.md

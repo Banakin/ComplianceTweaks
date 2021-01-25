@@ -1,17 +1,15 @@
-name: Build and Publish
+name: Build
 
-on:    
-  release:
-      types: [published]
+on:
+  push:
+    branches: 
+      - main
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    
-    - name: Add release tag
-      run: echo ::save-state name=RELEASE_VERSION::$(echo ${GITHUB_REF:10})
 
     - name: Publish to Github Packages Registry
       uses: elgohr/Publish-Docker-Github-Action@master
@@ -21,4 +19,4 @@ jobs:
         username: ${{ github.repository_owner }}
         password: ${{ secrets.GITHUB_TOKEN }}
         dockerfile: Dockerfile
-        tags: "latest,${{ env.STATE_RELEASE_VERSION }}"
+        tags: "latest"

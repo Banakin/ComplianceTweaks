@@ -21,41 +21,36 @@
     <a href="https://github.com/Compliance-Resource-Pack/ComplianceTweaksServer/blob/main/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/Compliance-Resource-Pack/ComplianceTweaksServer"></a>
 </p>
 
-<p align="center"><img src="screenshot.png"></img></p>
+# Deployment and Testing
+## Assets and Config
+In order to run your server you need to have an `assets` folder (the folder name can be changed with an environment variable). This assets folder will contain both the configuration/location for each of your modules in the `assets/config` folder as well as the images for these modules in the `assets/config` folder. If you would like an example, please check out the official [Compliance Tweaks Java x32 Assets Folder](https://github.com/Compliance-Resource-Pack/ComplianceTweaks-Java-x32).
 
-## Get Tn Touch
+### Environment Variables
+For more server configuration check out the environment variables in [example.env](example.env).
+
+## Deploying the server
+There are a few ways to deploy the server. It's really just an Express server written in TypeScript. The easiest way to deploy the server would be to use docker. For instructions on how to do so, check out [DOCKER.md](DOCKER.md).
+
+## Testing the server locally
+To test the server locally just run `npm i` and then `npm run dev`. Dotenv is installed, so if you would like to change any environment variables, just use a `.env` file in the root of the project.
+
+# Get Tn Touch
 - 💬 Come visit us on [Discord][discord]
 - ❗️ Create [an issue](https://github.com/Compliance-Resource-Pack/ComplianceTweaksServer/issues/new)
 - 🦜 Check us out on [Twitter][twitter]
 
-## Contributing
-There are two different categories for contributions. To contribute please read [CONTRIBUTING.md](CONTRIBUTING.md).
+# Contributing
+Before contributing please read [CONTRIBUTING.md](CONTRIBUTING.md).
 
-## Documentation
-For doumention on the project, please check out [the wiki][wiki].
-
-## Credits
-⚠ **NOTE** We try to give credit to those that created the textures but we're not great at keeping track. If you believe some textures are yours please contact us and we'll add you to this list (or take your textures down upon request).
-- [Banakin](https://banakin.github.io): Making the website and various tweaks
-- Doge: FullyAgedCropMarker and AlternateBlockDestruction
-- [The Compliance Team](https://compliancepack.net/): Making the Compliance Texture Pack
-- [Nekzuris](https://twitter.com/Nekzuris): ColoredPing
-- Pomik108: RainbowXPBar
-- Redcoke26: MelonHunger
-- Seirin-Blu: Unobtrusive Rain, Unobtrusive Water
-- TheRandomGamerTRG: Making the information site and various tweaks
-- [Stridey](https://www.planetminecraft.com/member/stridey/): LowShield
-- [Vanilla Tweaks](https://vanillatweaks.net/picker/resource-packs/): Inspiration
-- [jogurciQ](https://www.planetminecraft.com/member/jogurciq/): Dark UI textures
+# Credits
+## People involved
+- [Banakin](https://banakin.dev/) - Making the server
+- [The Compliance Team](https://compliancepack.net/) - Making the Compliance Texture Pack
+- [Vanilla Tweaks](https://vanillatweaks.net/picker/resource-packs/) - Inspiration
 
 ## Tech Used
-- [Firebase](https://firebase.google.com/) - Backend (API, Hosting, Storage)
-- [node.js](https://nodejs.org/) - Used for the API
+- [Docker](https://www.docker.com/) - Containerizing and deploying the server
+- [node.js](https://nodejs.org/) - Running the JavaScript server
+- [Express](https://expressjs.com/) - Framework for the API
 - [Canvas](https://github.com/Automattic/node-canvas) - Combining images
 - [Archiver](https://github.com/archiverjs/node-archiver) - Creating the ZIP file
-- [Hugo](https://gohugo.io/) - Website framework
-- [Webpack](https://webpack.js.org/) - Bundler
-- [Bootstrap](https://getbootstrap.com/) - CSS framework for the website
-- [jQuery](https://jquery.com/) - JavaScript Framework for the website
-- [Popper](https://popper.js.org/) - Engine for description popups
-- [Font Awesome](https://fontawesome.com/) - Icons used on the website

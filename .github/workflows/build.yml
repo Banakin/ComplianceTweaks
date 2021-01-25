@@ -1,17 +1,26 @@
-
-name: Deploy
+name: Build
 
 on:
-  workflow_run:
-    workflows: ["Build"]
-    branches: [main]
-    types: 
-      - completed
+  push:
+    branches: 
+      - main
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
+    - uses: actions/checkout@v1
+
+    - name: Publish to Github Packages Registry
+      uses: elgohr/Publish-Docker-Github-Action@master
+      with:
+        name: Compliance-Resource-Pack/ComplianceTweaksServer/server
+        registry: docker.pkg.github.com
+        username: ${{ secrets.ORG_GITHUB_USERNAME }}
+        password: ${{ secrets.GITHUB_TOKEN }}
+        dockerfile: Dockerfile
+        tags: latest
+
     - name: Deploy package to docker server
       uses: appleboy/ssh-action@master
       env:

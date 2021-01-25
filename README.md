@@ -34,7 +34,20 @@ There are a few ways to deploy the server. It's really just an Express server wr
 ## Testing the server locally
 To test the server locally just run `npm i` and then `npm run dev`. Dotenv is installed, so if you would like to change any environment variables, just use a `.env` file in the root of the project.
 
-# Get Tn Touch
+# Making requests
+Example body of GET request:
+```json
+{
+    "format":  "1.16.2",
+    "modules":  ["SlicedSwords", "ReducedPumpkinBlur", "ColoredBows", "OreBorders", "StickyPistonSides"],
+    "iconModules": ["MelonHunger", "ColoredPing", "BlueWitherHearts", "RainbowXP"],
+    "optionsBackground": "AcaciaPlanksBG",
+    "panoOption": "ClassicPano"
+}
+```
+Make a request like this to your server and it should respond with status `200` type `application/zip`.
+
+# Get In Touch
 - 💬 Come visit us on [Discord][discord]
 - ❗️ Create [an issue](https://github.com/Compliance-Resource-Pack/ComplianceTweaksServer/issues/new)
 - 🦜 Check us out on [Twitter][twitter]

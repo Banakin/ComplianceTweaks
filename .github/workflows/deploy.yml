@@ -24,6 +24,7 @@ jobs:
         port: ${{ secrets.DOCKER_SERVER_PORT }}
         envs: GITHUB_USERNAME, GITHUB_TOKEN
         script: |
+          echo $GITHUB_USERNAME
           docker login docker.pkg.github.com -u $GITHUB_USERNAME -p $GITHUB_TOKEN
           docker pull docker.pkg.github.com/compliance-resource-pack/compliancetweaksserver/server:latest
           cd /root/docker/compliance

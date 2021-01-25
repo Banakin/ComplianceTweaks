@@ -15,7 +15,7 @@ jobs:
     - name: Deploy package to docker server
       uses: appleboy/ssh-action@master
       env:
-          GITHUB_USERNAME: ${{ secrets.ORG_GITHUB_USERNAME }}
+          GITHUB_USERNAME: ${{ github.repository_owner }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         host: ${{ secrets.DOCKER_SERVER_HOST }}

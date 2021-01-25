@@ -20,20 +20,3 @@ jobs:
         password: ${{ secrets.GITHUB_TOKEN }}
         dockerfile: Dockerfile
         tags: latest
-
-    - name: Deploy package to docker server
-      uses: appleboy/ssh-action@master
-      env:
-          GITHUB_USERNAME: ${{ secrets.ORG_GITHUB_USERNAME }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        host: ${{ secrets.DOCKER_SERVER_HOST }}
-        username: ${{ secrets.DOCKER_SERVER_USERNAME }}
-        key: ${{ secrets.DOCKER_SERVER_KEY }}
-        port: ${{ secrets.DOCKER_SERVER_PORT }}
-        envs: GITHUB_USERNAME, GITHUB_TOKEN
-        script: |
-          docker login docker.pkg.github.com -u $GITHUB_USERNAME -p $GITHUB_TOKEN
-          docker pull docker.pkg.github.com/compliance-resource-pack/compliancetweaksserver/server:latest
-          cd /root/docker/compliance
-          docker-compose up -d

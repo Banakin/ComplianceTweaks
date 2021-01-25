@@ -1,4 +1,4 @@
-name: Build
+name: build
 
 on:
   push:
@@ -9,15 +9,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v1
 
-    - name: Get Repository Name In Lower Case
-      run: echo REPOSITORY_NAME=$(echo ${{ github.repository }} | tr '[:upper:]' '[:lower:]') >> $GITHUB_ENV
-
-    - name: Build and Push to GitHub Packages Docker Registry
-      uses: docker/build-push-action@v1
+    - name: Publish to Github Packages Registry
+      uses: elgohr/Publish-Docker-Github-Action@master
       with:
+        name: Compliance-Resource-Pack/ComplianceTweaksServer/server
+        registry: docker.pkg.github.com
         username: ${{ github.repository_owner }}
         password: ${{ secrets.GITHUB_TOKEN }}
-        repository: docker.pkg.github.com/${{ env.REPOSITORY_NAME }}/server
+        dockerfile: Dockerfile
         tags: latest

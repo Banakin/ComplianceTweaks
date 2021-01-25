@@ -1,7 +1,7 @@
-name: Build
+name: PR Build
 
 on:
-  push:
+  pull_request:
     branches: 
       - main
 

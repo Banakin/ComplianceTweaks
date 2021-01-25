@@ -9,9 +9,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
+    
+    - name: Add release tag
+      run: echo ::save-state name=RELEASE_VERSION::$(echo ${GITHUB_REF:10})
 
     - name: Publish to Github Packages Registry
-      pre: echo ::save-state name=RELEASE_VERSION::$(echo ${GITHUB_REF:10})
       uses: elgohr/Publish-Docker-Github-Action@master
       with:
         name: Compliance-Resource-Pack/ComplianceTweaksServer/server

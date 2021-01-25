@@ -27,4 +27,5 @@ jobs:
           docker login docker.pkg.github.com -u $GITHUB_USERNAME -p $GITHUB_TOKEN
           docker pull docker.pkg.github.com/compliance-resource-pack/compliancetweaksserver/server:latest
           cd /root/docker/compliance
-          docker-compose up -d
+          docker-compose up --force-recreate --build -d
+          docker image prune -f

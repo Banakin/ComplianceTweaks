@@ -20,12 +20,13 @@ jobs:
         registry: docker.pkg.github.com
         username: ${{ github.repository_owner }}
         password: ${{ secrets.GITHUB_TOKEN }}
-    - name: PrepareReg Names
-      run: echo IMAGE_REPOSITORY=$(echo ${{ github.repository }} | tr '[:upper:]' '[:lower:]') >> $GITHUB_ENV
+
+    - name: Get Repository Name In Lower Case
+      run: echo REPOSITORY_NAME=$(echo ${{ github.repository }} | tr '[:upper:]' '[:lower:]') >> $GITHUB_ENV
 
     - name: Build and push
       uses: docker/build-push-action@v2
       with:
         context: .
         push: true
-        tags: docker.pkg.github.com/${{ env.IMAGE_REPOSITORY }}/ComplianceTweaksServer/server:latest
+        tags: docker.pkg.github.com/${{ env.REPOSITORY_NAME }}/server:latest
